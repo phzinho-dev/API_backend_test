@@ -1,25 +1,9 @@
-const express = require('express')
-const axios = require('axios')
+const express = require('express');
+const app = express();
+const router = require('./router/router');
 
-const app = express()
+app.use(router);
 
-app.listen('3000')
-
-app.use(express.json())
-
-app.route('/').get( (req,res)) => {
-    axios.get('')
-
-}
-
-// app.route('/api/user').get((req,res) => {
-//     return res.json({...req.query.since})
-// })
-
-// app.route('/api/user/:username/details').get((req,res) => {
-//     return res.json({...req.params})
-// })
-
-// app.route('/api/user/:username/repos').get((req,res) => {
-//     return res.json({...req.params})
-// })
+app.listen(8080, function(req,res){
+    console.log('servidor funcionando');
+});
