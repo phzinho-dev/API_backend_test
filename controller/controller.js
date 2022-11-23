@@ -17,10 +17,10 @@ async function searchUsersGitHub(req, res) {
 }
 
 
-async function searchUseGitHubDetails(req, res) {
-    const { name } = req.params;
+async function searchUseGitHubSince(req, res) {
+    const { id } = req.params;
 
-    let {data} = await axios.get(`https://api.github.com/users/${name}`)
+    let {data} = await axios.get(`https://api.github.com/users:since=${id}`)
     return res.json(data)
 }
 
@@ -35,6 +35,6 @@ async function searchUseGitHubRep(req, res) {
 
 module.exports = { 
     searchUsersGitHub: searchUsersGitHub,
-    searchUseGitHubDetails: searchUseGitHubDetails,
+    searchUseGitHubSince: searchUseGitHubSince,
     searchUseGitHubRep: searchUseGitHubRep
 }
