@@ -5,7 +5,7 @@ method to use, when entering the URL the user must pass after the (.com) the /ap
 
 the way it was passed in the test link
 
-GET - /api/users?since={number}
+GET - /api/users/ or /api/users/:username
 
 GET - /api/users/:username/details
 
