@@ -4,7 +4,8 @@
   "description": "API created for back end job selection process\r I used the insomnia app for testing (https://insomnia.rest/download).",
   "main": "index.js",
   "scripts": {
-    "start": " nodemon ."
+    "dev": " nodemon .",
+    "start":"node index.js"
   },
   "keywords": [],
   "author": "Phelippe Vasquez",
