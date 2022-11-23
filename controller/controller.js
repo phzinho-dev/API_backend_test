@@ -20,7 +20,7 @@ async function searchUsersGitHub(req, res) {
 async function searchUseGitHubSince(req, res) {
     const { id } = req.params;
 
-    let {data} = await axios.get(`https://api.github.com/users:since=${id}`)
+    let {data} = await axios.get(`https://api.github.com/users?since=${id}`)
     return res.json(data)
 }
 
