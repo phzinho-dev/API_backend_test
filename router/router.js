@@ -1,12 +1,19 @@
 const express = require('express');
 const router = express.Router();
-const controller = require('../controller/controller');
+const {
+    searchUseGitHubDetails,
+    searchUseGitHubRep,
+    searchUsersGitHub
+} = require('../controller/controller');
+    
+router.route(["/users/", "/users/:name"])
+    .get(searchUsersGitHub)
 
-router.get('/searching/GitHub/:name', controller.searchUsersGitHub);
-
-router.get('/searching/GitHub/:name', controller.searchUseGitHubDetails);
-
-router.get('/searching/GitHub/:name', controller.searchUseGitHubRep);
+router.route("/users/:name/details")
+    .get(searchUseGitHubDetails)
+    
+router.route("/users/:name/repos")
+    .get(searchUseGitHubRep)
 
 
 module.exports = router;

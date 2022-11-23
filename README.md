@@ -1,6 +1,5 @@
 # API_backend_test
 API created for back end job selection process
-I used the insomnia app for testing (https://insomnia.rest/download).
 
 How to run:
 npm install
