@@ -1,13 +1,18 @@
 # API_backend_test
-API created for back end job selection process
+Backend API in node.js with express.js and axios
 
-How to run:
-npm install
-npm start
-download the packages(express.js)
+method to use, when entering the URL the user must pass after the (.com) the /api/users/
+
+the way it was passed in the test link
 
 GET - /api/users?since={number}
 
 GET - /api/users/:username/details
 
 GET - /api/users/:username/repos
+
+How to run:
+npm install
+npm start
+download the packages(express.js)
+
